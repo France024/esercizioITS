@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GuessMyLetter</title>
+    <link rel="stylesheet" th:href="@{/css/stile.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Indovina la Lettera</h1>
+
+        <!-- Form per inserire il nome e il numero -->
+        <form th:action="@{/}" method="post">
+            <label for="nomeGiocatore">Inserisci il tuo nome:</label>
+            <input type="text" id="nomeGiocatore" name="nomeGiocatore" th:value="${nomeGiocatore}" required/>
+            <br><br>
+
+            <label for="lettera">Inserisci la lettera (a-z):</label>
+            <input type="text" id="lettera" name="lettera" required/>
+            <button type="submit">Tenta la fortuna!</button>
+        </form>
+
+        <!-- Mostra il messaggio del gioco -->
+        <h3 th:if="${messaggio != null}" th:text="${messaggio}"></h3>
+
+        <!-- Mostra il numero di tentativi fatti -->
+        <h3 th:text="'Tentativi fatti: ' + ${tentativiGiocatore}"></h3>
+
+
+        <!-- Bottone per "Prossima Partita" -->
+        <form th:action="@{/prossima-partita}" method="post">
+            <button type="submit">Prossima Partita</button>
+        </form>
+        
+        <!-- Pulsante per accedere alla classifica -->
+        <form th:action="@{/classifica}" method="get">
+            <button type="submit">Vedi Classifica</button>
+        </form>
+        
+    </div>
+</body>
+</html>

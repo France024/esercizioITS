@@ -1,0 +1,124 @@
+/* Reset base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Font e background globale */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #fbeaff, #e0f7fa);
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* Contenitore principale */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Titolo principale */
+h1 {
+    text-align: center;
+    color: #6a1b9a;
+    margin-bottom: 30px;
+    font-size: 3em;
+}
+
+/* Sottotitoli */
+h2, h3 {
+    text-align: center;
+    color: #6a1b9a;
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+/* Form */
+form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    text-align: center;
+}
+
+input[type="text"]:focus {
+    border-color: #6a1b9a;
+    outline: none;
+    box-shadow: 0 0 5px #6a1b9a55;
+}
+
+/* Bottoni */
+button {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #ff8800, #ffb300);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #e67e00, #ffa726);
+    transform: scale(1.05);
+}
+
+/* Classifica */
+table.classifica-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.classifica-table th,
+.classifica-table td {
+    padding: 16px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1em;
+}
+
+.classifica-table th {
+    background-color: #6a1b9a;
+    color: white;
+    font-weight: bold;
+}
+
+.classifica-table tbody tr:nth-child(odd) {
+    background-color: #f3e5f5;
+}
+
+.classifica-table tbody tr:hover {
+    background-color: #ede7f6;
+}

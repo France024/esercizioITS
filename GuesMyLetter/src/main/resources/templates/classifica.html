@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Classifica - GuessMyLetter</title>
+    <link rel="stylesheet" th:href="@{/css/stile.css}">
+</head>
+<div class="container">
+    <body>
+        <h1 class="title">Classifica</h1>
+
+        <!-- Pulsante per tornare alla pagina principale -->
+        <form th:action="@{/prossima-partita}" method="post">
+            <button type="submit">Torna al Gioco</button>
+        </form>
+
+        <!-- Sezione della classifica -->
+        <table class="classifica-table">
+            <thead>
+                <tr>
+                    <th>Posizione</th>
+                    <th>Giocatore</th>
+                    <th>Tentativi</th>
+                    <th>Lettera</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="player, iterStat : ${classifica}">
+                    <td th:text="${iterStat.index + 1}"></td>
+                    <td th:text="${player.nome}"></td>
+                    <td th:text="${player.tentativi}"></td>
+                    <td th:text="${player.lettera}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</div>
+</html>
